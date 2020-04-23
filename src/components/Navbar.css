@@ -1,0 +1,13 @@
+.Navbar {
+  background-color: aquamarine;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.Navbar ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+.Navbar ul li { margin-left: 20px; }

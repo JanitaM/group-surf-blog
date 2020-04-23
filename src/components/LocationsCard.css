@@ -1,0 +1,22 @@
+.LocationsCard {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-weight: bold;
+}
+
+.LocationsCard-card {
+  background-color: #ffffff;
+  border: 1px solid #000;
+  border-radius: 5px;
+  opacity: 0.8;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+}
+
+.LocationsCard img {
+  width: 300px;
+  margin: 0 auto;
+}
