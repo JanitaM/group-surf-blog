@@ -5,22 +5,35 @@ import LocationsDetails from './LocationsDetails';
 
 function Home() {
   const [currentLocation, setCurrentLocation] = useState({});
-  const [isHomePage, setisHomePage] = useState(true);
+  const [isHomePage, setIsHomePage] = useState(true);
+
+  function updateLocation(details) {
+    setCurrentLocation(details);
+    setIsHomePage(false);
+  }
 
   if (!isHomePage) {
     return (
       <div>
-        <LocationsDetails setIsHomePage={setisHomePage} currentLocation={currentLocation} />
+        <LocationsDetails
+          setIsHomePage={setIsHomePage}
+          aLocation={currentLocation}
+        />
       </div>
     );
   }
 
   return (
     <div>
-      <LocationsCard />
+      {travelBlogDatabase.map(aLocation =>
+        <LocationsCard
+          aLocation={aLocation}
+          key={aLocation.id}
+          updateLocation={updateLocation}
+        />
+      )}
     </div>
   );
-
 }
 
 export default Home;

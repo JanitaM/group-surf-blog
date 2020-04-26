@@ -1,0 +1,4 @@
+To do:
+[x] Finished connecting React hooks so when a LocationCard is clicked, it will take the user to the LocationDetails page. The back button will take the user back to the home page.
+[] Update CSS for home page.
+[] Add CSS for LocationDetails page.

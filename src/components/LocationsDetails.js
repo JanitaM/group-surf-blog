@@ -1,18 +1,16 @@
 import React from 'react';
-import travelBlogDatabase from '../travelBlogDatabase';
 
-function LocationsDetails({ setCurrentLocation, currentLocation }) {
+function LocationsDetails({ setIsHomePage, aLocation }) {
   return (
-    <div className="LocationsCard">
-      {travelBlogDatabase.map(locations => (
-        <div className="LocationsCard-card">
-          <h3>{currentLocation.place}</h3>
-          <img src={currentLocation.image} />
-          <p>{currentLocation.description}</p>
-        </div>
-      ))
-      }
-    </div>
+    <main>
+      <button onClick={() => setIsHomePage(true)}>Go to home page</button>
+      <h2>Details for {aLocation.place}</h2>
+      <div className="LocationsCard">
+        <h3>{aLocation.place}</h3>
+        <img src={aLocation.image} />
+        <p>{aLocation.description}</p>
+      </div>
+    </main>
   );
 }
 
