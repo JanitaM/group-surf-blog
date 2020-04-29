@@ -1,15 +1,18 @@
 import React from 'react';
+import './LocationsDetails.css';
 
 function LocationsDetails({ setIsHomePage, aLocation }) {
   return (
-    <main>
-      <button onClick={() => setIsHomePage(true)}>Go to home page</button>
-      <h2>Details for {aLocation.place}</h2>
-      <div className="LocationsCard">
-        <h3>{aLocation.place}</h3>
+    <main className="LocationsDetails">
+      <div className="LocationsDetails-card">
         <img src={aLocation.image} />
-        <p>{aLocation.description}</p>
+        <div className="LocationsDetails-content">
+          <h3>{aLocation.place}</h3>
+          <p>{aLocation.description}</p>
+        </div>
       </div>
+
+      <button onClick={() => setIsHomePage(true)}>Go to home page</button>
     </main>
   );
 }
